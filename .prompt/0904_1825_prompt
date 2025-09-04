@@ -195,3 +195,161 @@ return(
     }
     """
 )
+
+
+### Result
+user command: open the door
+
+0: 608x800 1 door, 1 door-handle, 83.5ms
+Speed: 4.1ms preprocess, 83.5ms inference, 82.4ms postprocess per image at shape (1, 3, 800, 800)
+Detected: {'door': [[281, 110, 421, 299]], 'door-handle': [[382, 204, 397, 226]]}
+Annotated image saved to: /tmp/vlm_frame_1756977657258_det.png
+!!!!!!!!!!!
+content:  USER_COMMAND: open the door
+DETECTIONS: {"door": [[281, 110, 421, 299]], "door-handle": [[382, 204, 397, 226]]}
+FEEDBACK: {}
+TURN1 next_action: {'name': 'open_door', 'args': {'arm': 'right', 'object_label': 'door-handle', 'object': 'door-handle'}}
+TURN1 full_action_list: [{'name': 'open_door', 'args': {'arm': 'right', 'object_label': 'door-handle', 'object': 'door-handle'}}]
+RAW1: ```json
+{
+  "mode": "init",
+  "plan_version": 1,
+  "step_index": 0,
+  "next_action": {
+    "name": "open_door",
+    "args": {
+      "arm": "right",
+      "object_label": "door-handle"
+    }
+  },
+  "full_action_list": [
+    {
+      "name": "open_door",
+      "args": {
+        "arm": "right",
+        "object_label": "door-handle"
+      }
+    }
+  ],
+  "skip_log": [],
+  "visibility_warnings": [],
+  "explanation": "Open the door. Door is closed.",
+  "door_state_estimation": {
+    "state": "closed",
+    "confidence": 0.8,
+    "reason": "Primary check (interior not visible) confirms door state."
+  }
+}
+```
+user command: reset
+user command: close the door
+
+0: 608x800 1 door, 1 door-handle, 6.3ms
+Speed: 5.3ms preprocess, 6.3ms inference, 1.1ms postprocess per image at shape (1, 3, 800, 800)
+Detected: {'door': [[281, 110, 421, 298]], 'door-handle': [[382, 204, 397, 226]]}
+Annotated image saved to: /tmp/vlm_frame_1756977689871_det.png
+!!!!!!!!!!!
+content:  USER_COMMAND: close the door
+DETECTIONS: {"door": [[281, 110, 421, 298]], "door-handle": [[382, 204, 397, 226]]}
+FEEDBACK: {}
+TURN1 next_action: {'name': 'close_door', 'args': {'arm': 'right', 'object_label': 'door', 'object': 'door-handle'}}
+TURN1 full_action_list: [{'name': 'close_door', 'args': {'arm': 'right', 'object_label': 'door', 'object': 'door-handle'}}]
+RAW1: {
+  "mode": "step",
+  "plan_version": 1,
+  "step_index": 0,
+  "next_action": { "name": "close_door", "args": { "arm": "right", "object_label": "door" } },
+  "full_action_list": [
+    { "name": "close_door", "args": { "arm": "right", "object_label": "door" } }
+  ],
+  "skip_log": [],
+  "visibility_warnings": [],
+  "explanation": "Interior visible (primary); door already closed; no-op.",
+  "door_state_estimation": {
+    "state": "open",
+    "confidence": 1.0,
+    "evidence": [
+      "primary:interior_visible"
+    ]
+  }
+}
+user command: reset
+user command: open the door
+
+0: 608x800 1 door, 1 door-handle, 6.4ms
+Speed: 25.0ms preprocess, 6.4ms inference, 1.1ms postprocess per image at shape (1, 3, 800, 800)
+Detected: {'door': [[281, 110, 421, 298]], 'door-handle': [[382, 204, 397, 226]]}
+Annotated image saved to: /tmp/vlm_frame_1756977736526_det.png
+!!!!!!!!!!!
+content:  USER_COMMAND: open the door
+DETECTIONS: {"door": [[281, 110, 421, 298]], "door-handle": [[382, 204, 397, 226]]}
+FEEDBACK: {}
+TURN1 next_action: {'name': 'open_door', 'args': {'arm': 'right', 'object_label': 'door-handle', 'object': 'door-handle'}}
+TURN1 full_action_list: [{'name': 'open_door', 'args': {'arm': 'right', 'object_label': 'door-handle', 'object': 'door-handle'}}]
+RAW1: {
+  "mode": "step",
+  "plan_version": 1,
+  "step_index": 1,
+  "next_action": {
+    "name": "open_door",
+    "args": {
+      "arm": "right",
+      "object_label": "door-handle"
+    }
+  },
+  "full_action_list": [
+    {
+      "name": "open_door",
+      "args": {
+        "arm": "right",
+        "object_label": "door-handle"
+      }
+    }
+  ],
+  "skip_log": [],
+  "visibility_warnings": [
+    "Material not visible; no rotation search."
+  ],
+  "explanation": "Interior already visible (primary check); material not detected. Cannot proceed without material visibility."
+}
+user command: reset
+user command: close the door
+
+0: 608x800 1 door, 1 door-handle, 6.3ms
+Speed: 13.9ms preprocess, 6.3ms inference, 0.9ms postprocess per image at shape (1, 3, 800, 800)
+Detected: {'door': [[281, 110, 421, 298]], 'door-handle': [[382, 204, 397, 226]]}
+Annotated image saved to: /tmp/vlm_frame_1756977768170_det.png
+!!!!!!!!!!!
+content:  USER_COMMAND: close the door
+DETECTIONS: {"door": [[281, 110, 421, 298]], "door-handle": [[382, 204, 397, 226]]}
+FEEDBACK: {}
+Parsing error: Expecting ',' delimiter: line 19 column 6 (char 337)
+TURN1 next_action: {}
+TURN1 full_action_list: []
+RAW1: ```json
+{
+  "mode": "step",
+  "plan_version": 1,
+  "step_index": 0,
+  "next_action": {
+    "name": "close_door",
+    "args": {
+      "arm": "right",
+      "object_label": "door-handle"
+    }
+  },
+  "full_action_list": [
+    {
+      "name": "close_door",
+      "args": {
+        "arm": "right",
+        "object_label": "door-handle"
+      }
+    }
+  ],
+  "skip_log": [],
+  "visibility_warnings": [],
+  "explanation": "Door appears to be closed.",
+  "door_state_estimation": {
+    "state": "closed",
+```
