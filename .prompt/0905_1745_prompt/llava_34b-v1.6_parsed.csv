@@ -1,0 +1,7 @@
+iter,timestamp_iso,elapsed_sec,image_path,annotated_path,door_state,door_confidence,handle_present,material_visible,need_open_door_result,need_open_door_reason,material_after_open_result,material_after_open_reason,goal_status,goal_reason_code,goal_message,next_action_name,next_action_args,full_action_list_json,skip_log_json,detected_json,raw_len
+1,2025-09-05T14:59:12,9.616,/tmp/vlm_frame_1757051943426.png,/tmp/vlm_frame_1757051943426_det.png,,,,,,,,,,,,,,[],[],"{""door"":[[112,222,272,471]],""material"":[[324,342,336,355]]}",1069
+2,2025-09-05T14:59:16,3.605,/tmp/vlm_frame_1757051953916.png,/tmp/vlm_frame_1757051953916_det.png,,,,,,,,,,,,,,[],[],"{""door"":[[112,224,271,471]],""material"":[[324,342,336,355]]}",210
+3,2025-09-05T14:59:23,6.881,/tmp/vlm_frame_1757051957411.png,/tmp/vlm_frame_1757051957411_det.png,,,,,,,,,,,,,,[],[],"{""door"":[[112,220,272,471]],""material"":[[324,342,336,355]]}",719
+4,2025-09-05T14:59:27,3.864,/tmp/vlm_frame_1757051963912.png,/tmp/vlm_frame_1757051963912_det.png,,,,,,,,,,,,,,[],[],"{""door"":[[112,221,272,471]],""material"":[[324,342,336,355]]}",317
+5,2025-09-05T14:59:35,8.651,/tmp/vlm_frame_1757051968397.png,/tmp/vlm_frame_1757051968397_det.png,,,,,,,,,,,,,,[],[],"{""door"":[[112,218,272,471]],""material"":[[324,342,336,355]]}",773
+6,2025-09-05T14:59:39,3.764,/tmp/vlm_frame_1757051976885.png,/tmp/vlm_frame_1757051976885_det.png,,,,,,,,,,,,,,[],[],"{""door"":[[112,231,271,471]],""material"":[[324,342,336,355]]}",286
